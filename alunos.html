@@ -1,0 +1,117 @@
+<HTML>
+    <html Lang-"pt-br">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0"> 
+    <title>ALUNOS EM ATIVIDADE INF06T-M</title>
+    <link rel="stylesheet" href="style.css">
+   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+    <header>
+         <h1 class="titulo">Alunos em atividade e categoria: </h1>
+
+         <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="hierarquia.html">Hierarquia</a></li>
+          <li><a href="unidades.html">Unidades</a></li>
+          <li><a href="calendario.html">Calendário Escolar</a></li>
+        </ul>
+        
+     </nav>
+        
+        </header>
+              <main>
+              <section id="Alunos e categoria">
+    <h2 class="titulo">Alunos & Categoria</h2>
+    <div>
+        <button id="mostrarTodos">Mostrar Todos</button>
+        <button id="mostrarTrilhas">Mostrar Trilhas</button>
+        <button id="mostrarPagantes">Mostrar Pagantes</button>
+    </div>
+    <ul class="alunos" id="lista-alunos">
+        <li>Anna Luiza Lage - <strong class="trilhas">Trilhas</strong> (AL)</li>
+        <li>Arthur - <strong class="trilhas">Trilhas</strong> (AL)</li>
+        <li>Daynel - <strong class="trilhas">Trilhas</strong> (AL) </li>
+        <li>Felipe Cardoso - <strong class="trilhas">Trilhas</strong> (AL)</li>
+        <li>Gabriel Carvalho - <strong class ="pagante" >Pagante</strong> (AL)</li>
+        <li>Gabriel Arthur - <strong class="trilhas">Trilhas</strong> - (AL)</li>
+        <li>Gustavo Phillipe - <strong class ="pagante" >Pagante</strong> - (AL)</li>
+        <li>Hugo Moura - <strong class="trilhas">Trilhas</strong> - (AL)</li>
+        <li>Isabelle Felipe - <strong class ="pagante" >Pagante</strong> - (AL)</li>
+        <li>Ivan Henrique  - <strong class="trilhas">Trilhas</strong> - (AL)</li>
+        <li>Jamilly - <strong class="trilhas">Trilhas</strong> - (AL)</li>
+        <li>João Prados - <strong class ="pagante" >Pagante</strong> - (AL)</li>
+        <li>João Gabriel - <strong class ="pagante" >Pagante</strong> - (AL)</li>
+        <li>Layreen Zaidan - <strong class="trilhas">Trilhas</strong> - (AL)</li>
+        <li>Lionel - <strong class="trilhas">Trilhas</strong> - (AL)</li>
+        <li>Lucas Fernando - <strong class="trilhas">Trilhas</strong> - (AL)</li>
+        <li>Marcos Antonio - <strong class="trilhas">Trilhas</strong> - (AL)</li>
+        <li>Maria Eduarda - <strong class="trilhas">Trilhas</strong> - (AL)</li>
+        <li>Maxwell - <strong class="trilhas">Trilhas</strong> - (AL)</li>
+        <li>Miguel - <strong class="trilhas">Trilhas</strong> - (AL)</li>
+        <li>Pablo - <strong class="pagante">Pagante</strong> - (AL)</li>
+        <li>Paula - <strong class="trilhas">Trilhas</strong> - (AL)</li>
+        <li>Pedro Henrique - <strong class="trilhas">Trilhas</strong> - (AL)</li>
+        <li>Pedro Arthur - <strong class="trilhas">Trilhas</strong> - (AL)</li>
+        <li>Pedro Palhares - <strong class="trilhas">Trilhas</strong> - (AL)</li>
+        <li>Satiro - <strong class="trilhas">Trilhas</strong> - (AL)</li>
+        <li>Samuel Augusto - <strong class="trilhas">Trilhas</strong> - (AL)</li>
+        <li>Samuel Dourado - <strong class="trilhas">Trilhas</strong> - (AL)</li>
+        <li>Sulamita - <strong class="trilhas">Trilhas</strong> - (AL)</li>
+        <li>Thiago Xavier - <strong class ="pagante" >Pagante</strong> - (AL)</li>
+        <li>Vitor Gabriel - <strong class="trilhas">Trilhas</strong> - (AL)</li>
+    </ul>
+</section>
+                        <section id="Base e Dados">
+                        <h3 class="titulo">Dados dos alunos no geral: </h3>
+                         <p> Com base nos dados de Janeiro a Junho de 2025, conseguimos estimar as seguintes frequências: </p>  
+                          <ul class="dados">
+                            <li>Terça: 95% Frequência </li>
+                            <li>Quinta: 90% Frequência </li>
+                            <li>Sábado: 60% Frequência </li>
+                          </ul>
+
+                          <img class="img" src="Imagens/grafico.png" alt="Grafíco">
+                      
+                         <p>Os dados abaixo foram calculados com base na última lista de frequência (21/06/2025.)</p>
+
+
+              </main>
+
+              <script>
+                document.addEventListener('DOMContentLoaded', () => {
+    const listaAlunos = document.getElementById('lista-alunos');
+    const alunos = listaAlunos.getElementsByTagName('li');
+    const btnMostrarTodos = document.getElementById('mostrarTodos');
+    const btnMostrarTrilhas = document.getElementById('mostrarTrilhas');
+    const btnMostrarPagantes = document.getElementById('mostrarPagantes');
+
+    function filtrarAlunos(categoria) {
+        for (let i = 0; i < alunos.length; i++) {
+            const aluno = alunos[i];
+            const strongTag = aluno.querySelector('strong');
+            if (strongTag) {
+                if (categoria === 'todos' || strongTag.classList.contains(categoria)) {
+                    aluno.style.display = 'list-item'; // Mostra o item da lista
+                } else {
+                    aluno.style.display = 'none'; // Esconde o item da lista
+                }
+            }
+        }
+    }
+
+    btnMostrarTodos.addEventListener('click', () => filtrarAlunos('todos'));
+    btnMostrarTrilhas.addEventListener('click', () => filtrarAlunos('trilhas'));
+    btnMostrarPagantes.addEventListener('click', () => filtrarAlunos('pagante'));
+});
+
+              </script>
+            
+    
+              <footer>Site desenvolvido para setorização das demandas.</footer>
+              
+    
+    </body>
+    </html>

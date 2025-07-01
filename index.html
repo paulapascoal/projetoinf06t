@@ -1,0 +1,93 @@
+<html Lang-"pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale-1.0"> 
+<title>Grau Técnico - INF06T-M</title>
+<link rel="stylesheet" href="style.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+<header>
+     <h1 class="titulo">Mapa de reclamações da turma INF06T-M</h1>
+     <nav>
+        <ul>
+          <li><a href="alunos.html">Alunos</a></li>
+          <li><a href="hierarquia.html">Hierarquia</a></li>
+          <li><a href="unidades.html">Unidades</a></li>
+          <li><a href="calendario.html">Calendário Escolar</a></li>
+        </ul>
+        
+     </nav><!---->
+            </header>
+    
+     
+          <main>
+            <section id="Contexto">
+              <h2  class="titulo">O que preciso de vocês?</h2>
+              <p class="especial" >Pessoal, preciso de demandas para serem levadas para a reunião de liderança no dia de hoje,
+                cujo objetivo é <strong>TRAZER</strong> melhoras necessárias para a nossa turma. </p>
+                    </section>
+                 <section id="Demandas">
+         <h3 class="titulo">Quais são as demandas?</h3>
+             <p> Atualmente segue as demandas que nós temos para tratativa junto com o instrutor líder e com a coordenação:</p>
+            <ul id="lista-demandas">
+        <li>Limpeza do banheiro do 2 andar (prédio polo);</li>
+        <li>Computadores com cheiro de queimado;</li>
+        <li>Computadores não funcionam;</li>
+        <li>Bancada fora de funcionamento;</li>
+        <li>Melhora da limpeza no geral (foco banheiros);</li>
+           <li>Atendimento na coordenação.</li>
+            </ul>
+
+         <h4 class="titulo">Adicionar Nova Demanda:</h4>
+            <form id="form-demanda">
+        <label for="nova-demanda">Nova Reclamação:</label>
+        <input type="text" id="nova-demanda" name="nova-demanda" required>
+        <button type="submit">Adicionar Demanda</button>
+            </form>
+</section>
+                    <section id="Conclusão">
+                    <h3 class="titulo">Colaboração e contexto</h3>
+                 
+                     <p>Com base nas reclamações reunidas, é evidente que existem pontos importantes que precisam de atenção imediata para garantir um ambiente mais adequado e acolhedor a todos. Entre os principais problemas relatados, destacam-se a necessidade de melhoria na limpeza dos banheiros, especialmente no segundo andar do prédio polo, equipamentos de informática com mau funcionamento ou odor de queimado, além de bancadas inutilizadas e dificuldades no atendimento da coordenação. </p>
+               
+                    <p>
+                        Sabemos que a melhoria desses aspectos exige esforços conjuntos. Por isso, pedimos a colaboração de todos os alunos para manter o espaço limpo, fazer uso consciente dos equipamentos e reportar problemas de forma respeitosa e organizada. A participação ativa da comunidade estudantil é fundamental para que possamos buscar soluções junto à gestão e promover um ambiente mais funcional, limpo e agradável para todos.
+                        Juntos, podemos construir um espaço melhor!
+                    </p>
+              
+                     
+                     
+          </main>
+
+          <script>
+            document.addEventListener('DOMContentLoaded', () => {
+    const formDemanda = document.getElementById('form-demanda');
+    const inputNovaDemanda = document.getElementById('nova-demanda');
+    const listaDemandas = document.getElementById('lista-demandas');
+
+    formDemanda.addEventListener('submit', (event) => {
+        event.preventDefault(); // Impede o envio padrão do formulário
+
+        const textoDemanda = inputNovaDemanda.value.trim(); // Pega o valor e remove espaços em branco
+
+        if (textoDemanda !== '') {
+            const novoItemLista = document.createElement('li');
+            novoItemLista.textContent = textoDemanda;
+            listaDemandas.appendChild(novoItemLista);
+
+            inputNovaDemanda.value = ''; // Limpa o campo de input
+            alert('Demanda adicionada com sucesso!');
+        } else {
+            alert('Por favor, digite sua demanda antes de adicionar.');
+        }
+    });
+});
+          </script>
+        
+
+          <footer>Site desenvolvido para setorização das demandas.</footer>
+          
+
+</body>
+</html>
