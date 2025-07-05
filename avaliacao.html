@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-media.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+</head>
+<body>
+        <header>
+            <h2 class="titulo">Mini Quiz de Avaliação do Site</h2>
+     <nav>
+          <button class="hamburger-menu" aria-label="Abrir menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="hierarquia.html">Hierarquia</a></li>
+          <li><a href="unidades.html">Unidades</a></li>
+          <li><a href="calendario.html">Calendário Escolar</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+        
+     </nav>
+            </header>
+    
+        <form id="quizForm">
+            <div class="quiz-question">
+                <p>1. Você achou a navegação do site fácil e intuitiva?</p>
+                <label><input type="radio" name="pergunta1" value="sim" required> Sim</label>
+                <label><input type="radio" name="pergunta1" value="nao"> Não</label>
+                <div class="error-message" id="pergunta1Error"></div>
+            </div>
+
+            <div class="quiz-question">
+                <p>2. A interface visual do site é agradável?</p>
+                <label><input type="radio" name="pergunta2" value="sim" required> Sim</label>
+                <label><input type="radio" name="pergunta2" value="nao"> Não</label>
+                <div class="error-message" id="pergunta2Error"></div>
+            </div>
+
+            <div class="quiz-question">
+                <p>3. Você recomendaria este site para um amigo?</p>
+                <label><input type="radio" name="pergunta3" value="sim" required> Sim</label>
+                <label><input type="radio" name="pergunta3" value="talvez"> Talvez</label>
+                <label><input type="radio" name="pergunta3" value="nao"> Não</label>
+                <div class="error-message" id="pergunta3Error"></div>
+            </div>
+
+            <button type="submit">Enviar Avaliação</button>
+        </form>
+
+        <div id="quizSuccess" class="success-message">
+            <p>Obrigado por sua avaliação! Sua opinião é muito importante! 👍</p>
+        </div>
+    </div>
+     <script src="script.js"></script>
+
+    
+</body>
+</html>

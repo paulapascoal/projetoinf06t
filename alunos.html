@@ -7,12 +7,19 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-media.css">
    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
     </head>
     <body>
     <header>
          <h1 class="titulo">Alunos em atividade e categoria: </h1>
 
          <nav>
+              <button class="hamburger-menu" aria-label="Abrir menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+
         <ul>
           <li><a href="index.html">Início</a></li>
           <li><a href="hierarquia.html">Hierarquia</a></li>
@@ -80,35 +87,9 @@
 
 
               </main>
+                    <script src="script.js"></script>
 
-              <script>
-                document.addEventListener('DOMContentLoaded', () => {
-    const listaAlunos = document.getElementById('lista-alunos');
-    const alunos = listaAlunos.getElementsByTagName('li');
-    const btnMostrarTodos = document.getElementById('mostrarTodos');
-    const btnMostrarTrilhas = document.getElementById('mostrarTrilhas');
-    const btnMostrarPagantes = document.getElementById('mostrarPagantes');
-
-    function filtrarAlunos(categoria) {
-        for (let i = 0; i < alunos.length; i++) {
-            const aluno = alunos[i];
-            const strongTag = aluno.querySelector('strong');
-            if (strongTag) {
-                if (categoria === 'todos' || strongTag.classList.contains(categoria)) {
-                    aluno.style.display = 'list-item'; // Mostra o item da lista
-                } else {
-                    aluno.style.display = 'none'; // Esconde o item da lista
-                }
-            }
-        }
-    }
-
-    btnMostrarTodos.addEventListener('click', () => filtrarAlunos('todos'));
-    btnMostrarTrilhas.addEventListener('click', () => filtrarAlunos('trilhas'));
-    btnMostrarPagantes.addEventListener('click', () => filtrarAlunos('pagante'));
-});
-
-              </script>
+  
             
     
               <footer>Site desenvolvido para setorização das demandas.</footer>

@@ -7,16 +7,25 @@
  <link rel="stylesheet" href="style.css">
  <link rel="stylesheet" href="style-media.css">
   <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
 </head>
 <body>
   <header>
     <h1 class="titulo">Calendário Escolar</h1>
      <nav>
+        <button class="hamburger-menu" aria-label="Abrir menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+
         <ul>
           <li><a href="index.html">Início</a></li>
           <li><a href="alunos.html">Alunos</a></li>
           <li><a href="hierarquia.html">Hierarquia</a></li>
           <li><a href="unidades.html">Unidades</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+          <li><a href="avaliacao.html">Avaliação</a></li>
         </ul>
         
      </nav>
@@ -146,7 +155,7 @@
       </table>
     </section>
 
-    <!-- Próximos Eventos e Datas Comemorativas -->
+    
     <section id="events">
       <h2 class="titulo">Próximos Eventos e Datas Comemorativas</h2>
       <ul>
@@ -165,9 +174,8 @@
       </ul>
     </section>
 
-    <!-- Contato -->
-    <section id="contact">
-      <h2 class="titulo">Contato</h2>
+      <section id="contact">
+      <h2 class="titulo">Está com dúvidas sobre o calendário? Entre em contato!</h2>
       <form action="/submit" method="post">
         <label for="name">Nome:</label>
         <input type="text" id="name" name="name" required>
@@ -182,24 +190,9 @@
       </form>
     </section>
   </main>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-    const contactForm = document.querySelector('#contact form');
-
-    contactForm.addEventListener('submit', (event) => {
-        event.preventDefault(); // Impede o envio padrão do formulário
-
-        // Você pode adicionar aqui uma lógica para enviar os dados para um servidor, se necessário.
-        // Por enquanto, apenas exibiremos uma mensagem de sucesso.
-
-        alert('Sua mensagem foi enviada com sucesso! Em breve entraremos em contato.');
-
-        // Limpa os campos do formulário
-        contactForm.reset();
-    });
-});
-  </script>
+      <script src="script.js"></script>
+  
+  
 
   <footer>
     <p>&copy; 2025 Calendário Escolar. Todos os direitos reservados.</p>

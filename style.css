@@ -1,187 +1,230 @@
 @charset "UTF-8";
 
-body{
-    background-color: #9C71D9;
-   
-
+:root { 
+    --cor-principal-claro: #D8EDF2;
+    --cor-secundaria: #07338C;
+    --cor-destaque: #033E8C;  
+    --cor-texto-escuro: #02013A; 
+    --cor-fundo-alternativo: #022840; 
 }
 
+body {
+    background-color: var(--cor-principal-claro); 
+}
 
-
-.titulo{
+.titulo {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     font-size: 35px;
-    background-image: linear-gradient(to right, #181736, transparent);
-    color: white;
-    
-
-
+    background-image: linear-gradient(to right, var(--cor-fundo-alternativo), transparent); 
+    color: white; 
 }
 
-header p{
+header p {
     text-align: justify;
     padding-bottom: 2em;
 }
+.hamburger-menu {
+    display: none; 
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999;
+    
+}
+
+.hamburger-menu .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--cor-destaque);
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+
 nav {
     background-color: white;
     padding: 9px;
-    box-shadow: 2px solid brown; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     border-top-right-radius: 38px;
     border-bottom-left-radius: 22px;
-
-    
-    width: fit-content; 
-    margin: 0 auto; 
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-   
-    text-align: center;
+    display: flex;
+    justify-content: center; 
+    flex-wrap: nowrap;
 }
 
 nav ul li {
-    display: inline-block; 
+   
     margin: 0 10px; 
 }
 
 nav a {
     text-decoration: none;
-    color: rgb(73, 18, 18);
+    color: var(--cor-destaque);
     padding: 9px;
     border-radius: 10px;
     font-weight: bold;
     transition-duration: .2s;
+    white-space: nowrap; 
 }
 
 nav a:hover {
-    background-color: var(--cor3);
-    color: #9C71D9;
+    background-color: var(--cor-secundaria); 
+    color: white;
 }
-
 
 a {
     text-decoration: none;
-    color: rgb(73, 18, 18);
+    color: var(--cor-destaque); 
 }
 
-
-main{
+main {
     background-color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px;
+    max-width: 900px; 
+    margin: 20px auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
 }
 
-main strong{
-    color: #629be0;
+main strong {
+    color: var(--cor-secundaria);
     font-weight: bold;
 }
 
 ul {
     list-style-type: lower-greek;
-    margin: 5%; 
+    margin: 5%;
 }
+
 ul li {
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
     padding: 5px;
     margin-top: 10px;
 }
 
-.especial{
+.especial {
     text-align: center;
 }
 
-.alunos{
+.alunos {
     list-style: decimal-leading-zero;
-    
 }
 
-.dados{
+.dados {
     margin: 4%;
     margin-bottom: 7px;
     padding: 7px;
     margin-top: 13px;
-    
 }
 
-.pagante{
-    color: darkblue;
+.pagante {
+    color: var(--cor-destaque); 
 }
 
-.trilhas{
-    color: darkred;
+.trilhas {
+    color: #cc0000; 
 }
 
-.img{
+.img {
     width: 300px;
     display: block;
-    margin:auto;
+    margin: auto;
 }
 
 form {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  max-width: 500px;
-  margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: 20px auto;
 }
 
 form label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: #181736;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--cor-texto-escuro); 
 }
 
-form input, form textarea, form button {
-  width: 100%;
-  margin-bottom: 15px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
+form input,
+form textarea,
+form button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-form input:focus, form textarea:focus {
-  outline: none;
-  border-color: #9C71D9;
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: var(--cor-secundaria); 
 }
 
 form button {
-  background-color: #9C71D9;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
+    background-color: var(--cor-secundaria); 
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 form button:hover {
-  background-color: #8160b2;
+    background-color: var(--cor-destaque); 
 }
 
 main table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
 main table th,
 main table td {
-  padding: 10px;
-  text-align: center;
-  border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
 }
 
 main table th {
-  background-color: #629be0;
-  color: white;
+    background-color: var(--cor-destaque); 
+    color: white;
 }
 
 main table td {
-  background-color: #f9f9f9;
+    background-color: var(--cor-principal-claro); 
+    color: var(--cor-texto-escuro); 
 }
 
 #Alunos\ e\ categoria div {
@@ -190,7 +233,7 @@ main table td {
 }
 
 #Alunos\ e\ categoria button {
-    background-color: #629be0;
+    background-color: var(--cor-secundaria); 
     color: white;
     border: none;
     padding: 10px 15px;
@@ -202,23 +245,144 @@ main table td {
 }
 
 #Alunos\ e\ categoria button:hover {
-    background-color: #4a77b8;
+    background-color: var(--cor-destaque); 
 }
 
-footer{
-    background-color: #6360bb;
-    color: rgb(100, 0, 0);
+.container {
+   background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+   margin: 30px auto; 
+}
+
+
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 20px); 
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none; 
+}
+
+.success-message {
+    color: #28a745;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    display: none; 
+}
+
+.success-message p {
+    margin: 0;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    margin: 40px 0;
+}
+
+.quiz-question {
+    margin-bottom: 20px;
+    display: flex; 
+    flex-wrap: wrap;
+    align-items: center; 
+    gap: 15px; 
+}
+
+.quiz-question p {
+    font-weight: bold;
+    margin-bottom: 10px; 
+    color: var(--cor-texto-escuro);
+    width: 100%; 
+}
+
+.quiz-question label {
+    margin-right: 0; 
+    font-weight: normal;
+    color: var(--cor-texto-escuro);
+}
+
+
+input:not(:placeholder-shown):invalid,
+input.invalid {
+    border-color: #dc3545;
+}
+
+input:valid {
+    border-color: #28a745;
+}
+
+footer {
+    background-color: var(--cor-fundo-alternativo); 
+    color: var(--cor-principal-claro); 
     font-weight: bolder;
     text-align: center;
     font-size: 2em;
-    min-width:  300px; ;
-    max-width: 1000px ;
+    min-width: 300px;
+    max-width: 1000px;
     margin: auto;
     margin-top: 8px;
     padding: 9px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-
-    
 }

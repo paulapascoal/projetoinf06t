@@ -6,19 +6,28 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="style-media.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
 </head>
 <body>
 <header>
      <h1 class="titulo">Mapa de reclamações da turma INF06T-M</h1>
      <nav>
+          <button class="hamburger-menu" aria-label="Abrir menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+
         <ul>
           <li><a href="alunos.html">Alunos</a></li>
           <li><a href="hierarquia.html">Hierarquia</a></li>
           <li><a href="unidades.html">Unidades</a></li>
           <li><a href="calendario.html">Calendário Escolar</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+          <li><a href="avaliacao.html">Avaliação</a></li>
         </ul>
         
-     </nav><!---->
+     </nav>
             </header>
     
      
@@ -60,32 +69,10 @@
                      
                      
           </main>
+         <script src="script.js"></script>
 
-          <script>
-            document.addEventListener('DOMContentLoaded', () => {
-    const formDemanda = document.getElementById('form-demanda');
-    const inputNovaDemanda = document.getElementById('nova-demanda');
-    const listaDemandas = document.getElementById('lista-demandas');
-
-    formDemanda.addEventListener('submit', (event) => {
-        event.preventDefault(); // Impede o envio padrão do formulário
-
-        const textoDemanda = inputNovaDemanda.value.trim(); // Pega o valor e remove espaços em branco
-
-        if (textoDemanda !== '') {
-            const novoItemLista = document.createElement('li');
-            novoItemLista.textContent = textoDemanda;
-            listaDemandas.appendChild(novoItemLista);
-
-            inputNovaDemanda.value = ''; // Limpa o campo de input
-            alert('Demanda adicionada com sucesso!');
-        } else {
-            alert('Por favor, digite sua demanda antes de adicionar.');
-        }
-    });
-});
-          </script>
-        
+          
+            
 
           <footer>Site desenvolvido para setorização das demandas.</footer>
           
