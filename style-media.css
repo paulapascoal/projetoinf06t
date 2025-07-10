@@ -1,55 +1,80 @@
 @media screen and (max-width: 768px) {
     body {
         margin: 10px;
+        padding-top: 60px; 
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--cor-fundo-alternativo);
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        box-sizing: border-box;
     }
 
     .titulo {
         font-size: 28px;
         background-image: none;
-        background-color: #181736;
-        padding: 10px;
+        background-color: transparent;
+        padding: 0;
+        color: white;
     }
 
+    nav {
+        position: relative;
+    }
     
     nav ul {
-        display: none; 
-        flex-direction: column; 
+        display: none;
+        flex-direction: column;
         width: 100%;
-        position: absolute; 
-        top: 100%; 
-        left: 0;
+        position: absolute;
+        top: calc(100% + 5px);
+        right: 0;
         background-color: white; 
         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
         border-radius: 0 0 10px 10px;
-        padding: 10px 0; 
+        padding: 10px 0;
+        z-index: 999;
+        max-width: 250px;
     }
 
-    
     nav ul.active {
-        display: flex; 
+        display: flex;
     }
 
-   
     .hamburger-menu {
         display: block;
-        position: absolute; 
+        position: relative;
+        z-index: 1001;
     }
 
-   
     nav ul li {
-        margin: 5px 0; 
-        width: 100%; 
+        margin: 5px 0;
+        width: 100%;
         text-align: center;
     }
 
     nav a {
-        display: block; 
-        padding: 10px; 
-        width: 100%; 
-        box-sizing: border-box; 
+        display: block;
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        color: var(--cor-destaque); 
+        text-decoration: none;
     }
 
-   
+    nav a:hover {
+        background-color: var(--cor-secundaria); 
+        color: white;
+    }
+    
     main {
         padding: 15px;
     }
@@ -78,19 +103,27 @@
 
     footer {
         font-size: 1.2em;
-        min-width: unset;
-        max-width: 95%;
-        margin: 8px auto;
-        padding: 8px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
     }
 }
 
 
 @media screen and (min-width: 769px) {
     .hamburger-menu {
-        display: none; 
+        display: none;
     }
     nav ul {
-        display: flex !important; 
+        display: flex !important;
+    }
+    header {
+        position: static;
+        padding: initial;
+        background-color: initial;
+    }
+    .titulo {
+        background-color: initial;
+        padding: initial;
     }
 }

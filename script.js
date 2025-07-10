@@ -49,6 +49,22 @@
     btnMostrarPagantes.addEventListener('click', () => filtrarAlunos('pagante'));
 });
 
+//JS Hierarquia
+ let atual = 0;
+    const slides = document.querySelectorAll('.slide');
+    
+    function mudarSlide(direcao) {
+      atual += direcao;
+      if (atual >= slides.length) {
+        atual = 0;
+      }
+      if (atual < 0) {
+        atual = slides.length - 1;
+      }
+      const carrossel = document.getElementById('carrossel');
+      carrossel.style.transform = `translateX(-${atual * 100}%)`;
+    }
+
 // Js do Calendário
 
 

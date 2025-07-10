@@ -6,10 +6,17 @@
     --cor-destaque: #033E8C;  
     --cor-texto-escuro: #02013A; 
     --cor-fundo-alternativo: #022840; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
+body,html {
     background-color: var(--cor-principal-claro); 
+    scroll-behavior: smooth;
+    font-size: 16px;
+    line-height: 1.6;
+}
+header{
+    background-image: linear-gradient(to right, var(--cor-principal-claro), var(--cor-fundo-alternativo));
 }
 
 .titulo {
@@ -153,11 +160,7 @@ ul li {
     color: #cc0000; 
 }
 
-.img {
-    width: 300px;
-    display: block;
-    margin: auto;
-}
+
 
 form {
     background-color: #fff;
@@ -365,11 +368,61 @@ hr {
 input:not(:placeholder-shown):invalid,
 input.invalid {
     border-color: #dc3545;
+    box-sizing: border-box;
 }
 
 input:valid {
     border-color: #28a745;
 }
+
+.carrossel-container {
+    width: 100%;
+    max-width: 900px; 
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.carrossel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+   
+}
+
+.slide {
+    min-width: 100%; 
+    height: auto; 
+    display: block; 
+    border-radius: 10px;
+    box-sizing: border-box; 
+}
+
+
+.img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.botao {
+    background-color: var(--cor-secundaria);
+    color: rgb(14, 2, 2);
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+    background-color: var(--cor-destaque);
+}
+
 
 footer {
     background-color: var(--cor-fundo-alternativo); 
@@ -377,11 +430,10 @@ footer {
     font-weight: bolder;
     text-align: center;
     font-size: 2em;
-    min-width: 300px;
-    max-width: 1000px;
     margin: auto;
     margin-top: 8px;
-    padding: 9px;
+    padding: 15px 0;
+    width: 100%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
