@@ -158,7 +158,32 @@
 
    
 }
+  .container {
+        width: 90%; 
+        margin: 20px auto; 
+        padding: 15px; 
+    }
+
+    form {
+        padding: 15px; 
+    }
+     #quizForm {
+        width: 90%; 
+        margin: 20px auto; 
+        padding: 15px; 
+    }
+
+    .quiz-question {
+        flex-direction: column;
+        align-items: flex-start; 
+        gap: 10px;
+    }
+
+    .quiz-question label {
+        margin-right: 0; 
+    }
 }
+
 
     footer {
         font-size: 1.2em;
@@ -166,7 +191,7 @@
         margin: 0 auto;
         padding: 0 15px;
     }
-}
+
 
 
 @media screen and (min-width: 769px) {
