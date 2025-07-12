@@ -89,17 +89,76 @@
         padding: 15px;
     }
 
+   @media screen and (max-width: 768px) {
+    
     main table {
-        display: block;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+        width: 100%;
+        border-collapse: collapse; 
+        display: block; 
+        overflow: hidden;
+        margin-top: 20px;
     }
 
-    main table th,
-    main table td {
-        white-space: nowrap;
-        font-size: 0.9em;
+   
+    main thead {
+        display: none;
     }
+
+    
+    main tr {
+        margin-bottom: 15px; 
+        display: block; 
+        border: 1px solid var(--cor-secundaria); 
+        border-radius: 8px; 
+        background-color: white; 
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+        padding: 10px;
+    }
+
+   
+    main td {
+        display: block; 
+        text-align: left; 
+        padding: 8px 5px; 
+        border-bottom: 1px dashed #eee;
+    }
+
+    main td:last-child {
+        border-bottom: none; 
+    }
+
+    
+    main td::before {
+        content: attr(data-label); 
+        font-weight: bold; 
+        display: inline-block; 
+        width: 90px; 
+        min-width: 90px;
+        margin-right: 10px;
+        color: var(--cor-destaque);
+    }
+
+  
+    #calendar table {
+       
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+
+       
+        scrollbar-width: none; 
+        -ms-overflow-style: none; 
+    }
+
+   
+    #calendar table::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+
+   
+}
+}
 
     footer {
         font-size: 1.2em;
