@@ -377,7 +377,7 @@ input:valid {
 
 .carrossel-container {
     width: 100%;
-    max-width: 900px; 
+    max-width: 900px;
     margin: 20px auto;
     position: relative;
     overflow: hidden; 
@@ -388,19 +388,17 @@ input:valid {
 .carrossel {
     display: flex;
     transition: transform 0.5s ease-in-out;
-   
 }
 
 .slide {
-    min-width: 100%; 
-    height: auto; 
-    display: block; 
+    min-width: 100%;
+    height: auto;
+    display: block;
     border-radius: 10px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
-
-.img {
+.img { 
     max-width: 100%;
     height: auto;
     display: block;

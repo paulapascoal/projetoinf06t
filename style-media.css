@@ -127,3 +127,27 @@
         padding: initial;
     }
 }
+
+@media screen and (max-width: 768px) {
+   
+    .carrossel .slide { 
+        width: 100%; 
+        min-width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+  
+    .imagem-generica-limitada { 
+        max-width: 300px;
+        width: 100%; 
+        height: auto;
+    }
+
+  
+    .img { 
+        width: 100%;
+        max-width: 300px; 
+        height: auto;
+    }
+}
